@@ -51,7 +51,7 @@ L = 0.1143 # thickness of the entire wall in meters
 N = 10 # number of discrete wall segments
 dx = L/N # length of each wall segment in meters
 
-total_time = 8*3600.0 # total duration of simulation in seconds
+total_time = 14*3600.0 # total duration of simulation in seconds
 nsteps = 500 # number of timesteps
 dt = total_time/nsteps # duration of timestep in seconds
 
