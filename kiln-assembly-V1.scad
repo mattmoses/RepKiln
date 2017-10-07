@@ -36,7 +36,7 @@ module brick()
     {
         difference()
         {
-            cube([bl, bw, bh], center=true);
+            cube([BDF*bl, BDF*bw, BDF*bh], center=true);
             cylinder(h = bh*1.1, r=bhd/2, center=true);
             translate([bw/2,0,0])
                 cylinder(h = bh*1.1, r=bhd/2, center=true);
@@ -346,6 +346,13 @@ $fn = 50; // no units
 //////////////////////////////////////////////////////////////////////////////////////////////
 
 sf = 4.25/4.5; // shrink factor - this is measured from the actual bricks
+
+// brick display factor. you can make this slightly less than
+// one so that there is a small space between bricks. This
+// is helpful to make the STL appear a little more realistic
+// when viewing it on gitlab, but otherwise this should probably be
+// equal to 1.0
+BDF = 0.99; 
 
 bl = sf * 9; // brick length
 bw = sf * 4.5; // brick width
